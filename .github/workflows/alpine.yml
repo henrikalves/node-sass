@@ -22,7 +22,7 @@ jobs:
       - name: Install Alpine build tools
         run: apk add --no-cache python3 make git gcc g++
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install packages
         run: npm install --unsafe-perm
@@ -32,7 +32,7 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v7
         if: github.repository_owner == 'sass' && github.event_name != 'pull_request'
         with:
           name: ${{ matrix.node }}
