@@ -21,6 +21,11 @@ jobs:
           - x64
           - x86
 
+        exclude:
+          # Node 23+ ships no 32-bit Windows builds
+          - node: 24
+            architecture: x86
+
     steps:
       - uses: actions/checkout@v7
 
