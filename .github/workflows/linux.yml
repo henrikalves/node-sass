@@ -14,9 +14,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - node: 20
-            gcc: "gcc-10"
-            gpp: "g++-10"
+          - node: 22
+            gcc: "gcc-12"
+            gpp: "g++-12"
             os: ubuntu-22.04
           - node: 24
             gcc: "gcc-12"
